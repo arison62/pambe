@@ -245,34 +245,6 @@ BEFORE UPDATE ON Portfolios
 FOR EACH ROW
 EXECUTE FUNCTION trigger_set_timestamp();
 
--- Table: Certifications (Optionnel)
-CREATE TABLE Certifications (
-    certification_id BIGSERIAL PRIMARY KEY,
-    provider_user_id BIGINT NOT NULL REFERENCES Users (user_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    provider_skill_id BIGINT REFERENCES ProviderSkills (provider_skill_id) ON DELETE SET NULL ON UPDATE CASCADE, -- Peut être non lié à une compétence spécifique
-    title VARCHAR(255) NOT NULL,
-    document_url VARCHAR(512) NOT NULL,
-    verification_status certification_status_enum DEFAULT 'PENDING',
-    admin_verifier_id BIGINT REFERENCES Users (user_id) ON DELETE SET NULL ON UPDATE CASCADE, -- Admin qui a vérifié
-    verified_at_utc TIMESTAMPTZ,
-    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT check_admin_role_certifications CHECK (
-        admin_verifier_id IS NULL
-        OR (
-            SELECT role
-            FROM Users
-            WHERE
-                user_id = admin_verifier_id
-        ) = 'ADMIN'
-    )
-);
-
-CREATE TRIGGER set_timestamp_certifications
-BEFORE UPDATE ON Certifications
-FOR EACH ROW
-EXECUTE FUNCTION trigger_set_timestamp();
-
 -- Index (Exemples, à adapter selon les requêtes fréquentes)
 CREATE INDEX idx_users_email ON Users (email);
 
@@ -307,7 +279,5 @@ COMMENT ON COLUMN Bookings.final_price_agreed IS 'Prix final si différent du pr
 COMMENT ON COLUMN Transactions.payment_gateway_reference_id IS 'Référence unique de la transaction chez le fournisseur de paiement (Orange, MTN, Flutterwave).';
 
 COMMENT ON COLUMN Reviews.provider_user_id IS 'Redondant (car accessible via booking_id) mais peut simplifier certaines requêtes sur les avis d''un prestataire.';
-
-COMMENT ON COLUMN Certifications.check_admin_role_certifications IS 'Assure que admin_verifier_id est bien un admin. Note: Cette contrainte peut être complexe à maintenir directement en CHECK, une logique applicative ou un trigger plus complexe serait plus robuste si le rôle d''un user peut changer.';
 
 SELECT 'Structure de la base de données créée avec succès !' AS message;
