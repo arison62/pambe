@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { databaseConfig } from './configs/configurations';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseConfigs } from './configs/types';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -25,9 +26,12 @@ import { DatabaseConfigs } from './configs/types';
           type: 'postgres',
           url,
           autoLoadEntities: true,
+          entities: [__dirname + '/**/*.entity{.ts,.js}'],
         };
       },
     }),
+
+    AuthModule,
   ],
 })
 export class AppModule {}
