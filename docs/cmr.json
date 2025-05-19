@@ -1,0 +1,531 @@
+{
+    "country": "Cameroun",
+    "code": "CM",
+    "regions": [
+        {
+            "name": "Littoral",
+            "cities": [
+                {
+                    "name": "Douala",
+                    "latitude": 4.0500,
+                    "longitude": 9.7000
+                },
+                {
+                    "name": "Edéa",
+                    "latitude": 3.800,
+                    "longitude": 10.133
+                },
+                {
+                    "name": "Nkongsamba",
+                    "latitude": 4.9547,
+                    "longitude": 9.9404
+                },
+                {
+                    "name": "Loum",
+                    "latitude": 4.7182,
+                    "longitude": 9.7351
+                },
+                {
+                    "name": "Mbanga",
+                    "latitude": 4.4942318,
+                    "longitude": 9.561784699999999
+                },
+                {
+                    "name": "Manjo",
+                    "latitude": 4.8428,
+                    "longitude": 9.8217
+                },
+                {
+                    "name": "Melong",
+                    "latitude": 5.12181,
+                    "longitude": 9.96143
+                },
+                {
+                    "name": "Penja",
+                    "latitude": 4.63911,
+                    "longitude": 9.67987
+                },
+                {
+                    "name": "Dizangué",
+                    "latitude": 19.243,
+                    "longitude": 3.51667
+                }
+            ]
+        },
+        {
+            "name": "Centre",
+            "cities": [
+                {
+                    "name": "Yaoundé",
+                    "latitude": 3.844119,
+                    "longitude": 11.501346
+                },
+                {
+                    "name": "Mbalmayo",
+                    "latitude": 3.51667,
+                    "longitude": 11.5
+                },
+                {
+                    "name": "Bafia",
+                    "latitude": 4.75,
+                    "longitude": 11.23333
+                },
+                {
+                    "name": "Nkoteng",
+                    "latitude": 4.51667,
+                    "longitude": 12.03333
+                },
+                {
+                    "name": "Obala",
+                    "latitude": 4.1692,
+                    "longitude": 11.5358
+                },
+                {
+                    "name": "Nanga Eboko",
+                    "latitude": 4.68333,
+                    "longitude": 12.36667
+                },
+                {
+                    "name": "Mbandjock",
+                    "latitude": 4.45,
+                    "longitude": 11.9
+                },
+                {
+                    "name": "Eséka",
+                    "latitude": 3.65,
+                    "longitude": 10.76667
+                },
+                {
+                    "name": "Akonolinga",
+                    "latitude": 3.76667,
+                    "longitude": 12.25
+                },
+                {
+                    "name": "Makénéné",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Monatélé",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Sa'a",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Ouest",
+            "cities": [
+                {
+                    "name": "Bafoussam",
+                    "latitude": 5.4667,
+                    "longitude": 10.4167
+                },
+                {
+                    "name": "Dschang",
+                    "latitude": 5.44397,
+                    "longitude": 10.05332
+                },
+                {
+                    "name": "Mbouda",
+                    "latitude": 5.62611,
+                    "longitude": 10.25421
+                },
+                {
+                    "name": "Foumban",
+                    "latitude": 5.72662,
+                    "longitude": 10.89865
+                },
+                {
+                    "name": "Bafang",
+                    "latitude": 5.1601362,
+                    "longitude": 10.1871351
+                },
+                {
+                    "name": "Bangangté",
+                    "latitude": 5.1443561,
+                    "longitude": 10.5239867
+                },
+                {
+                    "name": "Foumbot",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bandjoun",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Baham",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bawaju",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Nord-Ouest",
+            "cities": [
+                {
+                    "name": "Bamenda",
+                    "latitude": 5.9597,
+                    "longitude": 10.14597
+                },
+                {
+                    "name": "Wum",
+                    "latitude": 6.38333,
+                    "longitude": 10.06667
+                },
+                {
+                    "name": "Kumbo",
+                    "latitude": 6.2053,
+                    "longitude": 10.6872
+                },
+                {
+                    "name": "Fundong",
+                    "latitude": 6.25,
+                    "longitude": 10.26667
+                },
+                {
+                    "name": "Mbengwi",
+                    "latitude": 6.01667,
+                    "longitude": 10
+                },
+                {
+                    "name": "Nkambé",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Batibo",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bambui",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bafut",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Ndop",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Ako",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bali",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Sud-Ouest",
+            "cities": [
+                {
+                    "name": "Buéa",
+                    "latitude": 4.159302,
+                    "longitude": 9.243536
+                },
+                {
+                    "name": "Limbé",
+                    "latitude": 4.02419,
+                    "longitude": 9.21972
+                },
+                {
+                    "name": "Kumba",
+                    "latitude": 4.6363,
+                    "longitude": 9.4469
+                },
+                {
+                    "name": "Mamfe",
+                    "latitude": 5.7667,
+                    "longitude": 9.2833
+                },
+                {
+                    "name": "Tiko",
+                    "latitude": 4.078630599999999,
+                    "longitude": 9.358984
+                },
+                {
+                    "name": "Muyuka",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Fontem",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bangem",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Menji",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Mudemba",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Idenau",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Ekondo-Titi",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Adamaoua",
+            "cities": [
+                {
+                    "name": "Ngaoundéré",
+                    "latitude": 7.3214,
+                    "longitude": 13.5839
+                },
+                {
+                    "name": "Banyo",
+                    "latitude": 6.78,
+                    "longitude": 11.82
+                },
+                {
+                    "name": "Meiganga",
+                    "latitude": 6.53,
+                    "longitude": 14.37
+                },
+                {
+                    "name": "Tibati",
+                    "latitude": 6.46504,
+                    "longitude": 12.62843
+                },
+                {
+                    "name": "Tignère",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Martap",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Est",
+            "cities": [
+                {
+                    "name": "Bertoua",
+                    "latitude": 4.5791946,
+                    "longitude": 13.6767958
+                },
+                {
+                    "name": "Batouri",
+                    "latitude": 4.47,
+                    "longitude": 14.37
+                },
+                {
+                    "name": "Bélabo",
+                    "latitude": 4.9333,
+                    "longitude": 13.3
+                },
+                {
+                    "name": "Abong-Mbang",
+                    "latitude": 3.9833,
+                    "longitude": 13.1667
+                },
+                {
+                    "name": "Yokadouma",
+                    "latitude": 3.51667,
+                    "longitude": 15.05
+                },
+                {
+                    "name": "Garoua-Boulaï",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Kette",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Lomié",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Mindourou",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Extrême-Nord",
+            "cities": [
+                {
+                    "name": "Maroua",
+                    "latitude": 10.5823,
+                    "longitude": 14.3275
+                },
+                {
+                    "name": "Kousséri",
+                    "latitude": 12.084255,
+                    "longitude": 15.017879
+                },
+                {
+                    "name": "Mokolo",
+                    "latitude": 10.7424589,
+                    "longitude": 13.8042382
+                },
+                {
+                    "name": "Yagoua",
+                    "latitude": 10.3428,
+                    "longitude": 15.2406
+                },
+                {
+                    "name": "Mora",
+                    "latitude": 11.043,
+                    "longitude": 14.145
+                },
+                {
+                    "name": "Kaélé",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Maga",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Guidiguis",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Blangoua",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Bogo",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Nord",
+            "cities": [
+                {
+                    "name": "Garoua",
+                    "latitude": 9.3000,
+                    "longitude": 13.4000
+                },
+                {
+                    "name": "Guider",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Figuil",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Lagdo",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Poli",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Tcholliré",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        },
+        {
+            "name": "Sud",
+            "cities": [
+                {
+                    "name": "Ebolowa",
+                    "latitude": 2.9167,
+                    "longitude": 11.1500
+                },
+                {
+                    "name": "Kribi",
+                    "latitude": 2.940594,
+                    "longitude": 9.910191
+                },
+                {
+                    "name": "Ambam",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Sangmélima",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Campo",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Djoum",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Lomié",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Meyomessi",
+                    "latitude": null,
+                    "longitude": null
+                },
+                {
+                    "name": "Mintom",
+                    "latitude": null,
+                    "longitude": null
+                }
+            ]
+        }
+    ]
+}
