@@ -378,7 +378,7 @@ INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Eséka', 3
 INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Akonolinga', 3.76667, 12.25, 2);
 INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Makénéné', null, null, 2);
 INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Monatélé', null, null, 2);
-INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Sa\'a', null, null, 2);
+INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Sa''a', null, null, 2);
 
 -- Region: Est
 INSERT INTO villes(nom, latitude, longitude, id_subdivision) VALUES ('Bertoua', 4.5791946, 13.6767958, 3);
