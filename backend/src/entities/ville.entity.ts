@@ -5,9 +5,13 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
+  JoinColumn,
+  ManyToOne,
 } from 'typeorm';
 import { Quartier } from './quartier.entity';
 import { Utilisateur } from './utilisateur.entity';
+import { Pays } from './pays.entity';
+import { Subdivision } from './subdivision.entity';
 
 @Entity('villes')
 export class Ville {
@@ -17,8 +21,6 @@ export class Ville {
   @Column({ name: 'nom', unique: true })
   nom: string;
 
-  @Column({ name: 'code_pays', default: 'CM', length: 2 })
-  codePays: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
@@ -29,6 +31,14 @@ export class Ville {
   // Relations
   @OneToMany(() => Quartier, (quartier) => quartier.ville)
   quartiers: Quartier[];
+
+  @ManyToOne(() => Pays, (pays) => pays.villes)
+  @JoinColumn({ name: 'code_pays' })
+  pays: Pays;
+
+  @ManyToOne(() => Subdivision, (subdivision) => subdivision.villes)
+  @JoinColumn({ name: 'id_subdivision' })
+  subdivision: Subdivision;
 
   @OneToMany(() => Utilisateur, (utilisateur) => utilisateur.ville)
   utilisateurs: Utilisateur[];

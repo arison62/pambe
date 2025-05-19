@@ -31,9 +31,9 @@ import { UsersModule } from './users/users.module';
         };
       },
     }),
- 
+
     AuthModule,
- 
+
     UsersModule,
   ],
 })
