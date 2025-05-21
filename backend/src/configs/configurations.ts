@@ -5,3 +5,10 @@ export const databaseConfig = () => ({
     url: process.env.DATABASE_URL,
   },
 });
+
+export const jwtConfig = () => ({
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRE,
+  },
+});

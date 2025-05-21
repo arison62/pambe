@@ -89,7 +89,7 @@ CREATE TABLE Utilisateurs (
     id_ville BIGINT REFERENCES Villes (id_ville) ON DELETE RESTRICT ON UPDATE CASCADE,
     id_quartier BIGINT REFERENCES Quartiers (id_quartier) ON DELETE SET NULL ON UPDATE CASCADE,
     url_photo_profil VARCHAR(512),
-    role type_role NOT NULL,
+    role type_role NOT NULL DEFAULT 'CLIENT',
     telephone_verifie BOOLEAN DEFAULT FALSE,
     email_verifie BOOLEAN DEFAULT FALSE,
     est_actif BOOLEAN DEFAULT TRUE,

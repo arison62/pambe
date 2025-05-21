@@ -21,7 +21,6 @@ export class Ville {
   @Column({ name: 'nom', unique: true })
   nom: string;
 
-
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 

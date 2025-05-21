@@ -1,16 +1,16 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { databaseConfig } from './configs/configurations';
+import { databaseConfig, jwtConfig } from './configs/configurations';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseConfigs } from './configs/types';
 import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
+import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       envFilePath: ['.env.development.local', '.env.development'],
-      load: [databaseConfig],
+      load: [databaseConfig, jwtConfig],
       isGlobal: true,
     }),
 
@@ -34,7 +34,7 @@ import { UsersModule } from './users/users.module';
 
     AuthModule,
 
-    UsersModule,
+    UtilisateursModule,
   ],
 })
 export class AppModule {}

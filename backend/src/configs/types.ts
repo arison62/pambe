@@ -3,3 +3,8 @@ export interface DatabaseConfigs {
   host: string;
   url: string;
 }
+
+export interface JwtConfigs {
+  secret: string;
+  expiresIn: string;
+}

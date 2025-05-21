@@ -59,7 +59,12 @@ export class Utilisateur {
   @Column({ name: 'url_photo_profil', nullable: true })
   urlPhotoProfil: string;
 
-  @Column({ name: 'role', type: 'enum', enum: TypeRole })
+  @Column({
+    name: 'role',
+    type: 'enum',
+    enum: TypeRole,
+    default: TypeRole.CLIENT,
+  })
   role: TypeRole;
 
   @Column({ name: 'telephone_verifie', default: false })
@@ -77,7 +82,7 @@ export class Utilisateur {
     enum: MethodeAuth,
     default: MethodeAuth.EMAIL_PASSWORD,
   })
-  methodeAuthentification: MethodeAuth;
+  methodeAuth: MethodeAuth;
 
   @Column({ name: 'id_externe_auth', nullable: true })
   idExterneAuth: string;
