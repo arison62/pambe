@@ -19,7 +19,7 @@ import { JwtStrategy } from './jwt.strategy';
         if (!jwtConfigs) {
           throw new Error('JWT configuration is not defined');
         }
-        console.log(jwtConfigs);
+
         return {
           secret: jwtConfigs.secret,
           signOptions: { expiresIn: jwtConfigs.expiresIn },

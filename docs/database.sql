@@ -1,3 +1,4 @@
+-- Active: 1747856261231@@127.0.0.1@3306
 -- Activer l'extension pour les UUID si vous préférez utiliser des UUID pour les PK
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 

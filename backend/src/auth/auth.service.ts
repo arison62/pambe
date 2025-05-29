@@ -3,6 +3,7 @@ import * as bcrypt from 'bcrypt';
 import { UtilisateursService } from 'src/utilisateurs/utilisateurs.service';
 import { JwtService } from '@nestjs/jwt';
 import CreationUtilisateurDto from 'src/utilisateurs/dto/creation-utilisateur.dto';
+import { ApiBody } from '@nestjs/swagger';
 
 @Injectable()
 export class AuthService {
@@ -26,6 +27,7 @@ export class AuthService {
     throw new NotFoundException();
   }
 
+  @ApiBody({ type: CreationUtilisateurDto })
   async signUp(creationUtilisateurDto: CreationUtilisateurDto) {
     const user = await this.utilisateursService.createUtilisateur(
       creationUtilisateurDto,

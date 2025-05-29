@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import * as bcrypt from 'bcrypt';
 import {
   MethodeAuth,
   TypeRole,
@@ -20,12 +21,15 @@ export class UtilisateursService {
       email: utilisateurDto.email,
     });
     if (alredyExistUser) {
-      throw new Error("L'utilisateur existe déjà");
+      throw new HttpException("L'Utilisateur existe deja", 403);
     }
-    const user = utilisateurDto as Utilisateur;
-    user.role = TypeRole[utilisateurDto.role as keyof typeof TypeRole];
-    user.methodeAuth =
-      MethodeAuth[utilisateurDto.methodeAuth as keyof typeof MethodeAuth];
+    const user = this.utilisateursRepository.create({
+      ...utilisateurDto,
+      hashMotDePasse: await bcrypt.hash(utilisateurDto.MotDePasse, 10),
+      role: TypeRole[utilisateurDto.role as keyof typeof TypeRole],
+      methodeAuth:
+        MethodeAuth[utilisateurDto.methodeAuth as keyof typeof MethodeAuth],
+    });
     return await this.utilisateursRepository.save(user);
   }
 
