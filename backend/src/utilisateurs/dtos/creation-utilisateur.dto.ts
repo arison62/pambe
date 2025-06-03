@@ -7,8 +7,7 @@ import {
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { registerDecorator, ValidationOptions } from 'class-validator';
-import { MethodeAuth, TypeRole } from 'src/entities/utilisateur.entity';
-import { Optional } from '@nestjs/common';
+import { MethodeAuth, TypeRole } from 'src/common/entities/utilisateur.entity';
 
 export function IsValidRole(
   property: string,
@@ -51,11 +50,16 @@ export function IsValidMethodAuth(
 }
 
 export default class CreationUtilisateurDto {
+  @IsString()
+  @IsOptional()
+  numeroTelephone: string;
+
   @ApiProperty({
     description: "L'email de l'utilisateur",
   })
   @IsEmail({}, { message: "L'email doit être valide" })
   email: string;
+
   @IsString()
   @MinLength(7, {
     message: 'Le mot de passe doit contenir au moins 7 caractères',
@@ -65,7 +69,7 @@ export default class CreationUtilisateurDto {
     minLength: 7,
   })
   @IsOptional()
-  MotDePasse: string;
+  motDePasse: string;
 
   @ApiProperty({
     description: "Le nom complet de l'utilisateur",
@@ -76,33 +80,65 @@ export default class CreationUtilisateurDto {
   nomComplet: string;
 
   @ApiProperty({
-    description: "Le numéro de téléphone de l'utilisateur",
+    description: "L'ID de la ville de l'utilisateur",
     required: false,
-    example: '+237 650 xxx xxx',
   })
-  @IsString()
   @IsOptional()
-  numeroTelephone: string;
+  idVille: number;
+
+  @ApiProperty({
+    description: "L'ID du quartier de l'utilisateur",
+    required: false,
+  })
+  @IsOptional()
+  idQuartier: number;
+
+  @ApiProperty({
+    type: 'string',
+    format: 'binary',
+    description: "L'URL de la photo de profil de l'utilisateur",
+    required: false,
+  })
+  @IsOptional()
+  urlPhotoProfil: string;
+
+  @IsValidRole('role', {
+    message: 'Le role doit être CLIENT, PRESTATAIRE ou ADMIN',
+  })
+  @ApiProperty({
+    enum: ['CLIENT', 'PRESTATAIRE', 'ADMIN'],
+    default: 'CLIENT',
+    required: false,
+  })
+  @IsOptional()
+  role: string;
 
   @ApiProperty({
     type: Boolean,
     default: false,
+    required: false,
+  })
+  @IsBoolean()
+  @IsOptional()
+  telephoneVerifie: boolean;
+
+  @ApiProperty({
+    type: Boolean,
+    default: false,
+    required: false,
   })
   @IsBoolean()
   @IsOptional()
   emailVerifie: boolean;
 
   @ApiProperty({
-    enum: ['CLIENT', 'PRESTAIRE', 'ADMIN'],
-    default: 'CLIENT',
+    type: Boolean,
+    default: true,
     required: false,
   })
-  @Optional()
-  @IsValidRole('role', {
-    message: 'Le role doit être CLIENT, PRESTATAIRE ou ADMIN',
-  })
+  @IsBoolean()
   @IsOptional()
-  role: string;
+  estActif: boolean;
 
   @ApiProperty({
     enum: ['EMAIL_PASSWORD', 'GOOGLE'],

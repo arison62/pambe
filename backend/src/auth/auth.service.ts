@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { UtilisateursService } from 'src/utilisateurs/utilisateurs.service';
 import { JwtService } from '@nestjs/jwt';
-import CreationUtilisateurDto from 'src/utilisateurs/dto/creation-utilisateur.dto';
+import CreationUtilisateurDto from 'src/utilisateurs/dtos/creation-utilisateur.dto';
 import { ApiBody } from '@nestjs/swagger';
 
 @Injectable()

@@ -25,7 +25,6 @@ export enum TypeRole {
   PRESTATAIRE = 'PRESTATAIRE',
   ADMIN = 'ADMIN',
 }
-
 export enum MethodeAuth {
   EMAIL_PASSWORD = 'EMAIL_PASSWORD',
   GOOGLE = 'GOOGLE',

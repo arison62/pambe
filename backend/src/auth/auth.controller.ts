@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import CreationUtilisateurDto from 'src/utilisateurs/dto/creation-utilisateur.dto';
+import CreationUtilisateurDto from 'src/utilisateurs/dtos/creation-utilisateur.dto';
 import {
   ApiBadRequestResponse,
   ApiBody,

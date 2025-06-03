@@ -1,4 +1,4 @@
-import { TypeRole } from 'src/entities/utilisateur.entity';
+import { TypeRole } from 'src/common/entities/utilisateur.entity';
 
 export type User = {
   email: string;
