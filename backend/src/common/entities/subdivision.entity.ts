@@ -18,7 +18,7 @@ export class Subdivision {
   typeSubdivision: string;
 
   @Column()
-  name: string;
+  nom: string;
 
   @ManyToOne(() => Pays, (pays) => pays.subdivisions)
   @JoinColumn({ name: 'code_pays' })

@@ -86,11 +86,17 @@ export class Utilisateur {
   @Column({ name: 'id_externe_auth', nullable: true })
   idExterneAuth: string;
 
+  @Column({ name: 'est_supprime', default: false })
+  estSupprime: boolean;
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
+
+  @Column({ name: 'deleted_at', nullable: true })
+  deletedAt: Date;
 
   // Relations
   @ManyToOne(() => Ville, (ville) => ville.utilisateurs)

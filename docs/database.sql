@@ -94,10 +94,12 @@ CREATE TABLE Utilisateurs (
     telephone_verifie BOOLEAN DEFAULT FALSE,
     email_verifie BOOLEAN DEFAULT FALSE,
     est_actif BOOLEAN DEFAULT TRUE,
+    est_supprime BOOLEAN DEFAULT FALSE -- Pour gérer la suppression logique,
     methode_authentification methode_auth NOT NULL DEFAULT 'EMAIL_PASSWORD',
     id_externe_auth VARCHAR(255), -- ID externe pour l'authentification OAuth
     created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    delete_at TIMESTAMPTZ, -- Pour gérer la suppression logique
 );
 
 CREATE TRIGGER declencheur_timestamp_utilisateurs

@@ -96,8 +96,9 @@ export default class CreationUtilisateurDto {
   @ApiProperty({
     type: 'string',
     format: 'binary',
-    description: "L'URL de la photo de profil de l'utilisateur",
+    description: "Photo de profil de l'utilisateur",
     required: false,
+    maximum: 20000000, // 20 Mo
   })
   @IsOptional()
   urlPhotoProfil: string;
