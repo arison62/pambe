@@ -27,7 +27,7 @@ export class ProfilPrestataire {
   disponibiliteGenerale: string;
 
   @Column({ name: 'verifie_par_admin', default: false })
-  verifieFarAdmin: boolean;
+  verifieParAdmin: boolean;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;

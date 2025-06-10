@@ -114,7 +114,7 @@ export class UtilisateursController {
   async search(
     @Res() res: Response,
     @Query('search') search: string,
-    @Query('limit') limit: number = 100,
+    @Query('limit') limit: number = 50,
     @Query('page', ParseIntPipe) page: number = 1,
   ) {
     // Si une recherche est fournie, rechercher les utilisateurs par nom ou email

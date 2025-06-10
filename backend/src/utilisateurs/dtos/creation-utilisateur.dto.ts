@@ -50,6 +50,10 @@ export function IsValidMethodAuth(
 }
 
 export default class CreationUtilisateurDto {
+  @ApiProperty({
+    description: "Le nom d'utilisateur",
+    required: false,
+  })
   @IsString()
   @IsOptional()
   numeroTelephone: string;

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseConfigs } from './configs/types';
 import { AuthModule } from './auth/auth.module';
 import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
+import { ProfilPrestataireModule } from './profil-prestataire/profil-prestataire.module';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
           type: 'postgres',
           url,
           autoLoadEntities: true,
-          entities: [__dirname + '/**/*.entity{.ts,.js}'],
+          entities: [__dirname + '/common/entities/*.entity{.ts,.js}'],
         };
       },
     }),
@@ -35,6 +36,8 @@ import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
     AuthModule,
 
     UtilisateursModule,
+
+    ProfilPrestataireModule,
   ],
 })
 export class AppModule {}
