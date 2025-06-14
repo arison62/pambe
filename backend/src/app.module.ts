@@ -6,6 +6,7 @@ import { DatabaseConfigs } from './configs/types';
 import { AuthModule } from './auth/auth.module';
 import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
 import { ProfilPrestataireModule } from './profil-prestataire/profil-prestataire.module';
+import { ServiceCompetenceModule } from './service-competence/service-competence.module';
 
 @Module({
   imports: [
@@ -38,6 +39,8 @@ import { ProfilPrestataireModule } from './profil-prestataire/profil-prestataire
     UtilisateursModule,
 
     ProfilPrestataireModule,
+
+    ServiceCompetenceModule,
   ],
 })
 export class AppModule {}
