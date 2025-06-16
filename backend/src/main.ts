@@ -3,6 +3,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
 import InfosProfilUtilisateurDto from './profil-prestataire/dtos/infos-profil-utilisateur-dto';
+import { InfosCompetenceDto } from './service-competence/dtos/competence-dto';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -36,7 +37,7 @@ async function bootstrap() {
     .build();
   const documentFactory = () =>
     SwaggerModule.createDocument(app, config, {
-      extraModels: [InfosProfilUtilisateurDto],
+      extraModels: [InfosProfilUtilisateurDto, InfosCompetenceDto],
     });
   SwaggerModule.setup('api', app, documentFactory);
 
